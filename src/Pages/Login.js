@@ -11,7 +11,21 @@ function Login(props) {
     var [passwordValue, setPasswordValue] = useState("");
     return (
         <div>
-            
+            <h1>Login page</h1>
+            <h6>Email</h6>
+            <input type="text" onChange={(e) => {setLoginValue(e.target.value)}} value={loginValue}></input>
+            <h6>Password</h6>
+            <input type="text" onChange={(e) => {setPasswordValue(e.target.value)}} value={passwordValue}></input>
+            <button onClick={() =>
+    loginUser(
+      userDispatch,
+      loginValue,
+      passwordValue,
+      props.history,
+      setIsLoading,
+      setError,
+    )
+  }>Login</button>
         </div>
     )
 }
