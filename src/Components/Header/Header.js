@@ -13,8 +13,8 @@ function Header(props) {
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile &nbsp;&nbsp;&nbsp;</a>
                 <div class="dropdown-menu">
-                  <div role="separator" class="dropdown-menu"></div>
-                  <a class="dropdown-item" onClick={() => signOut(userDispatch, props.history)}>Logout</a>
+                  <div class="dropdown-menu"></div>
+                  <a class="dropdown-item" onClick={() => signOut(userDispatch, props.history)} style={{cursor:"default"}}>Logout</a>
                 </div>
               </li>
             </ul>
