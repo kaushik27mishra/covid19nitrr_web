@@ -7,11 +7,11 @@ function Header(props) {
 
   return (
     <div>
-        <nav id="navbar-example2" class="navbar navbar-light" style={{backgroundColor: "#e3f2fd"}}>
-            <a class="navbar-brand" href="#">MI19 Admin Panel</a>
+        <nav id="navbar-example2" class="navbar navbar-light" style={{backgroundColor: "#1976d2", color: "white", padding:"2.5vh", boxShadow: "2px 2px 8px #888888"}}>
+            <a class="navbar-brand" style ={{color:"white"}} href="#">MI19 Admin Panel</a>
             <ul class="nav nav-pills">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile &nbsp;&nbsp;&nbsp;</a>
                 <div class="dropdown-menu">
                   <div role="separator" class="dropdown-divider"></div>
                   <a class="dropdown-item" onClick={() => signOut(userDispatch, props.history)}>Logout</a>
