@@ -10,17 +10,17 @@ export default function Sidebar() {
     <div className="wrapper" style={{border:"1px solid grey", boxShadow:"1px 1px 10px grey"}}>
     <nav id="sidebar" style={{background:"white"}}>
 
-        <ul className="list-unstyled components">
+        <ul className="list-unstyled components" style={{color:"grey"}}>
             {/* <p>Dummy Heading</p> */}
             <li style={{marginLeft:"5vw"}}>
             {/*<FontAwesomeIcon icon="home"/>*/}
-            <Link to='/app/dashboard' style={{color:"grey"}}>Dashboard</Link>
+            <Link to='/app/dashboard' >Dashboard</Link>
             </li>
             <li style={{marginLeft:"5vw"}}>
-                <Link to='/app/register' style={{color:"grey"}}>Add User</Link>
+                <Link to='/app/register'>Add User</Link>
             </li>
             <li style={{marginLeft:"5vw"}}>
-            <Link to='/app/profiles' style={{color:"grey"}}>Profiles</Link>
+            <Link to='/app/profiles'>Profiles</Link>
             </li>
         </ul>
 
