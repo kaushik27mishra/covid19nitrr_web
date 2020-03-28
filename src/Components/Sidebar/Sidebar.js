@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
@@ -12,15 +11,15 @@ export default function Sidebar() {
 
         <ul className="list-unstyled components" style={{color:"grey"}}>
             {/* <p>Dummy Heading</p> */}
-            <li style={{marginLeft:"5vw"}}>
+            <li style={{marginLeft:"2vw"}}>
             {/*<FontAwesomeIcon icon="home"/>*/}
-            <Link to='/app/dashboard' >Dashboard</Link>
+            <Link to='/app/dashboard' ><i class="fa fa-laptop" style={{marginRight:"1vw"}}/> Dashboard</Link>
             </li>
-            <li style={{marginLeft:"5vw"}}>
-                <Link to='/app/register'>Add User</Link>
+            <li style={{marginLeft:"2vw"}}>
+                <Link to='/app/register'><i class="fa fa-plus" style={{marginRight:"1vw"}}/> Add User</Link>
             </li>
-            <li style={{marginLeft:"5vw"}}>
-            <Link to='/app/profiles'>Profiles</Link>
+            <li style={{marginLeft:"2vw"}}>
+            <Link to='/app/profiles'><i class="fa fa-users" style={{marginRight:"1vw"}}/> Profiles</Link>
             </li>
         </ul>
 
