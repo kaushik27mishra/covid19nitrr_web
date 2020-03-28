@@ -1,12 +1,13 @@
 import React from 'react'
 import { useUserDispatch, signOut } from "../../Context/UserContext";
+// import './style.css'
 
 function Header(props) {
   var userDispatch = useUserDispatch();
 
   return (
     <div>
-        <nav id="navbar-example2" class="navbar navbar-light bg-light">
+        <nav id="navbar-example2" class="navbar navbar-light" style={{backgroundColor: "#e3f2fd"}}>
             <a class="navbar-brand" href="#">MI19 Admin Panel</a>
             <ul class="nav nav-pills">
               <li class="nav-item dropdown">
