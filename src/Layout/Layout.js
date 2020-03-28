@@ -9,14 +9,16 @@ import Profiles from "../Pages/Profiles/Profiles"
 function Layout(props) {
 
   return (
-    <div>
+    <div >
         <Header history={props.history} />
-        <Sidebar />
+        <div style={{display:"flex"}}>
+          <Sidebar />
           <Switch>
             <Route path="/app/dashboard" component={Dashboard} />
             <Route path="/app/register" component={Register} />
             <Route path="/app/profiles" component={Profiles} />
           </Switch>
+        </div>
     </div>
   );
 }

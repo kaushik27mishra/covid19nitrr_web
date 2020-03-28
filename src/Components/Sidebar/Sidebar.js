@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Sidebar() {
  
   return (
-    <div className="wrapper">
+    <div className="wrapper" >
     <nav id="sidebar">
 
         <ul className="list-unstyled components">
