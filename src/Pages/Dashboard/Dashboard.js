@@ -31,7 +31,6 @@ export default class Dashboard extends Component {
               <h1 className="text-center">Coronavirus stats (India)</h1>
                <Graph />
                <table class="table fadeInUp" style={{animationDelay:'1s'}}>
-                <table class="table">
 
                   <thead class="thead-dark">
                     <tr>
@@ -44,14 +43,14 @@ export default class Dashboard extends Component {
                   </thead>
                   <tbody>
                   {datas.map((event,index) => (
-        <tr key = {index + 1}>
-          <th scope="row">{index+1}</th>
-          <td>{event.state}</td>
-          <td>{event.active}</td>        
-          <td>{event.confirmed}</td>
-          <td>{event.deaths}</td>
-        </tr>
-       ))}
+                      <tr key = {index + 1}>
+                        <th scope="row">{index+1}</th>
+                        <td>{event.state}</td>
+                        <td>{event.active}</td>        
+                        <td>{event.confirmed}</td>
+                        <td>{event.deaths}</td>
+                      </tr>
+                  ))}
                   </tbody>
                 </table>
             </div>
