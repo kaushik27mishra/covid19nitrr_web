@@ -1,5 +1,5 @@
 import React, { Component , useState, useEffect } from 'react'
-
+import Graph from './Graph';
 export default class Dashboard extends Component {
   constructor(props) {
     super(props)
@@ -26,13 +26,9 @@ export default class Dashboard extends Component {
       var datas = this.state.data
         return (
             <div style={{paddingTop:"20px"}} className="container">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="button-addon2" />
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-                  </div>
-                </div>
-                <table class="table">
+              <h1 className="text-center">Coronavirus stats (India)</h1>
+               <Graph />
+               <table class="table fadeInUp" style={{animationDelay:'1s'}}>
                   <thead class="thead-dark">
                     <tr>
                       <th scope="col">#</th>
