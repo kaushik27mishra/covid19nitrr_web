@@ -1,4 +1,5 @@
 import React, { Component , useState, useEffect } from 'react'
+import Graph from './Graph';
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -26,7 +27,11 @@ export default class Dashboard extends Component {
       var datas = this.state.data
         return (
             <div style={{paddingTop:"20px"}} className="container">
-                <table class="table">
+
+              <h1 className="text-center">Coronavirus stats (India)</h1>
+               <Graph />
+               <table class="table fadeInUp" style={{animationDelay:'1s'}}>
+
                   <thead class="thead-dark">
                     <tr>
                       <th scope="col">#</th>
@@ -38,14 +43,14 @@ export default class Dashboard extends Component {
                   </thead>
                   <tbody>
                   {datas.map((event,index) => (
-        <tr key = {index + 1}>
-          <th scope="row">{index+1}</th>
-          <td>{event.state}</td>
-          <td>{event.active}</td>        
-          <td>{event.confirmed}</td>
-          <td>{event.deaths}</td>
-        </tr>
-       ))}
+                      <tr key = {index + 1}>
+                        <th scope="row">{index+1}</th>
+                        <td>{event.state}</td>
+                        <td>{event.active}</td>        
+                        <td>{event.confirmed}</td>
+                        <td>{event.deaths}</td>
+                      </tr>
+                  ))}
                   </tbody>
                 </table>
             </div>
