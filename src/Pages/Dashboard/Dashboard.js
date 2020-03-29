@@ -33,7 +33,7 @@ export default class Dashboard extends Component {
                       <th scope="col">States</th>
                       <th scope="col">Active</th>
                       <th scope="col">Confirmed</th>
-                      <th scope="col">Recovered</th>
+                      <th scope="col">Deaths</th>
                     </tr>
                   </thead>
                   <tbody>
