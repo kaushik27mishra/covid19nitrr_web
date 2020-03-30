@@ -10,8 +10,10 @@ export default function App() {
   var { isAuthenticated } = useUserState();
 
   return (
+    
     <HashRouter>
       <Switch>
+        
         <Route exact path="/" render={() => <Redirect to="/app/dashboard" />} />
         <Route
           exact

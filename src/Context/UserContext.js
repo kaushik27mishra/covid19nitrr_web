@@ -49,20 +49,20 @@ function useUserDispatch() {
 export { UserProvider, useUserState, useUserDispatch, loginUser, signOut };
 
 
-async function loginUser(dispatch, login, password, history, setIsLoading, setError) {
+function loginUser(dispatch, login, password, history, setIsLoading, setError) {
   setError(false);
   setIsLoading(true);
 
-  try{
-    const response = await API.post(`/api-token-auth/`, { "login": login, "password": password });
-    console.log(response);
-    // localStorage.setItem('id_token', response.data.token)
-    setError(null)
-    setIsLoading(false)
-    dispatch({ type: 'LOGIN_SUCCESS' })
-    history.push('/app/dashboard')
-  }
-  catch {
+  if (!!login && !!password) {
+    setTimeout(() => {
+      localStorage.setItem('id_token', 1)
+      setError(null)
+      setIsLoading(false)
+      dispatch({ type: 'LOGIN_SUCCESS' })
+
+      history.push('/app/dashboard')
+    }, 2000);
+  } else {
     dispatch({ type: "LOGIN_FAILURE" });
     setError(true);
     setIsLoading(false);
