@@ -15,6 +15,9 @@ function Login(props) {
         <br/>
         <br/>
         <br/>
+        {
+          (error) ? <div class="alert alert-danger" role="alert">Login failure</div> : null
+        }
         <div class="card">
             <div class="card-header">
               MI19 Admin Panel
@@ -23,7 +26,7 @@ function Login(props) {
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" value={loginValue} onChange={(e) => setLoginValue(e.target.value)} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <input type="text" value={loginValue} onChange={(e) => setLoginValue(e.target.value)} class="form-control" id="exampleInputEmail1" />
                 {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
               </div>
               <div class="form-group">

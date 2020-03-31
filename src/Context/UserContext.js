@@ -10,6 +10,9 @@ function userReducer(state, action) {
       return { ...state, isAuthenticated: true };
     case "SIGN_OUT_SUCCESS":
       return { ...state, isAuthenticated: false };
+    case "LOGIN_FAILURE":
+      // console.log("failure");
+      return { ...state, isAuthenticated: false };
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -49,20 +52,20 @@ function useUserDispatch() {
 export { UserProvider, useUserState, useUserDispatch, loginUser, signOut };
 
 
-function loginUser(dispatch, login, password, history, setIsLoading, setError) {
+async function loginUser(dispatch, login, password, history, setIsLoading, setError) {
   setError(false);
   setIsLoading(true);
 
-  if (!!login && !!password) {
-    setTimeout(() => {
-      localStorage.setItem('id_token', 1)
-      setError(null)
-      setIsLoading(false)
-      dispatch({ type: 'LOGIN_SUCCESS' })
-
-      history.push('/app/dashboard')
-    }, 2000);
-  } else {
+  try{
+    const response = await API.post(`api-token-auth/`, { "username": login, "password": password });
+    // console.log(response.data.token);
+    localStorage.setItem('id_token', response.data.token)
+    setError(null)
+    setIsLoading(false)
+    dispatch({ type: 'LOGIN_SUCCESS' })
+    history.push('/app/dashboard')
+  }
+  catch {
     dispatch({ type: "LOGIN_FAILURE" });
     setError(true);
     setIsLoading(false);

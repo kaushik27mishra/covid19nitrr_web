@@ -25,8 +25,8 @@ export default class Graph extends Component {
                 res.cases_time_series.forEach(ele => l.push(ele.date));
                 var t = [];
                 res.cases_time_series.forEach(ele => t.push(ele.totalconfirmed));
-                console.log(l);
-                console.log(t);
+                // console.log(l);
+                // console.log(t);
                 this.setState({
                     labels: l,
                     datasets: [
@@ -48,7 +48,7 @@ componentDidMount(){
 }
 render() {
     var datas = this.state;
-    console.log(datas)
+    // console.log(datas)
     return (
         <div>
             <Line
