@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import Graph from './Graph';
+import Map from '../../Components/Map/Map'
 import './styles.css';
 export default class Dashboard extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class Dashboard extends Component {
     var datas = this.state.data
     return (
       <div style={{ paddingTop: "20px" }} className="container">
-
+        <Map />
         <h1 className="text-center">Coronavirus stats (India)</h1>
         <Graph />
         <br/>
